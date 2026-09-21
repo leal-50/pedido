@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Pedido Amor ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{background:#0f172a;color:#fff;text-align:center;min-height:100vh;}
+.tela{display:none;padding:2rem;min-height:100vh;flex-direction:column;align-items:center;justify-content:center;}
+.ativa{display:flex;}
+h1, h2{color:#ffd700;margin-bottom:1rem;}
+p{font-size:1.1rem;max-width:400px;line-height:1.8;margin-bottom:2rem;}
+.botao{background:#ffd700;color:#000;border:none;padding:1rem 2rem;font-size:1.1rem;font-weight:bold;border-radius:50px;cursor:pointer;}
+.botao:hover{transform:scale(1.05);}
+img{max-width:300px;border-radius:16px;margin:1.5rem 0;box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.destaque{font-size:1.4rem;color:#ffd700;font-weight:bold;line-height:2;}
+.aviso-foto{color:#9ca3af;font-size:0.9rem;margin-top:-1rem;}
+</style>
+</head>
+<body>
+
+<!-- Tela 1 -->
+<div class="tela ativa" id="t1">
+<h1>Nossa História ❤️</h1>
+<p>Minha Princesa, tudo começou no curso de bombeiro…<br>e se transformou na coisa mais bonita da minha vida.</p>
+<button class="botao" onclick="prox()">Começar →</button>
+</div>
+
+<!-- Tela 2 -->
+<div class="tela" id="t2">
+<h2>Onde Tudo Começou</h2>
+<img src="foto1.jpg.jpg" alt="Nós no curso" onerror="this.style.display='none'">
+<p>Aqui nossos caminhos se cruzaram.<br>Não foi só um curso. Foi Deus te colocando no meu caminho, minha branca.</p>
+<button class="botao" onclick="prox()">Continuar →</button>
+</div>
+
+<!-- Tela 3 -->
+<div class="tela" id="t3">
+<h2>Você Me Faz Feliz</h2>
+<img src="foto2.jpg.jpg" alt="Juntos" onerror="this.style.display='none'">
+<p>Meu amor, cada dia ao seu lado é especial.<br>Compartilhamos cansaço, risadas… e um amor que cresceu.</p>
+<button class="botao" onclick="prox()">Continuar →</button>
+</div>
+
+<!-- Tela 4 -->
+<div class="tela" id="t4">
+<h2>Tantos Mares 🎵</h2>
+<img src="foto3.jpg.jpg" alt="Nosso amor" onerror="this.style.display='none'">
+<p>Não importa para onde vamos.<br>O que importa é com quem vamos.<br>E eu quero ir com você, amor.</p>
+<button class="botao" onclick="prox()">O que vem depois? →</button>
+</div>
+
+<!-- Tela 5 — Pedido -->
+<div class="tela" id="t5">
+<h2>❤️ Meu Pedido</h2>
+<img src="foto4.jpg.jpg" alt="Meu amor" onerror="this.style.display='none'">
+<p>Quero ser seu parceiro para a vida toda.<br>Te proteger, cuidar de você, te fazer feliz sempre, minha branca.</p>
+<p class="destaque">Quer ser oficialmente a minha namorada? ❤️</p>
+<button class="botao" onclick="final()">✅ SIM! 💍</button>
+</div>
+
+<!-- Tela Final -->
+<div class="tela" id="tf">
+<img src="foto5.jpg.jpg" alt="Meu amor" onerror="this.style.display='none'">
+<h1>💍 Eu te amo, minha dorminhoca. ❤️</h1>
+<p>Vire para o lado…<br>Estou aqui esperando por você! 🌹</p>
+</div>
+
+<script>
+let n = 1;
+function prox(){
+    document.getElementById('t'+n).classList.remove('ativa');
+    n++;
+    document.getElementById('t'+n).classList.add('ativa');
+}
+function final(){
+    document.getElementById('t5').classList.remove('ativa');
+    document.getElementById('tf').classList.add('ativa');
+}
+</script>
+
+</body>
+</html>
